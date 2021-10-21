@@ -1,0 +1,19 @@
+.active-page {
+  color: #d3455b !important;
+}
+
+.navbar-btn {
+  background-color: #d3455b;
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #d3455b;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
