@@ -1,0 +1,11 @@
+/* Search input */
+.form-control {
+  border-color: #d3455b;
+}
+
+/* Search button */
+#search {
+  background-color: #d3455b;
+  color: white;
+  border-color: #d3455b;
+}
