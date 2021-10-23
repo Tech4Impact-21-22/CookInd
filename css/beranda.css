@@ -1,0 +1,263 @@
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    height: 10px;
+    background-color: #d3455b;
+    border-radius: 5px;
+}
+
+
+div.wrapper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    margin: 15px 0;
+}
+
+div.box-wrap{
+    width: 98%;
+    height: 80vh;
+}
+
+div#box-left{
+    padding: 0px 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.btn-str-exp{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+div.btn-str-exp a{
+    font-size: 20px;
+    border: 1px solid tomato;
+    padding: 5px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: tomato;
+    font-weight: bold;
+    box-shadow: -1px -1px 1px tomato;
+}
+
+div.btn-str-exp a:nth-child(2){
+    margin-left: 30px;
+}
+
+div#box-left h1, div#box-left p, div#box-left div.btn-str-exp{
+    margin: 16px 0;
+}
+
+div#box-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#box-right img{
+    width: 520px;
+    height: 420px;
+}
+
+.button1:hover, .button2:hover{
+    background-color: #d3455b;
+    color: white;
+}
+
+/*why CookInd*/
+
+div.wrapper-exp-cook{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+div.wrapper-exp-cook span{
+    color: #d3455b;
+}
+
+div.wrapper-exp-cook h1{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+div.wrapper-box-exp-cook{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+div.wrapper-box-exp-cook .box-exp{
+    width: 33.33%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.exp{
+    padding: 0 30px;
+}
+
+.box-exp img{
+    width: 250px;
+    height: 300px;
+}
+
+.box-exp h2, .box-exp p{
+    text-align: center;
+}
+
+.box-exp h2{
+    font-size: 26px;
+}
+
+
+/* footer */
+footer{
+    position: static;
+}
+
+/* responsive*/
+
+@media (max-width: 1050px) {
+    div.btn-str-exp a{
+        width: fit-content;
+        padding: 5px 5px;
+        font-size: 15px;
+    }
+    div.box-wrap {
+        height: 700px;
+    }
+}
+
+@media (max-width: 990px) {
+    div.wrapper{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-family: sans-serif;
+        margin: 15px 0;
+    }
+    div#box-left h1, div#box-left p, div#box-left div.btn-str-exp{
+        margin: 16px 0;
+        text-align: center;
+    }
+    div.btn-str-exp{
+        margin: auto;       
+    }
+    div.btn-str-exp{
+        justify-content: center;
+    }
+    div#box-right img{
+        height: 280px;
+        width: 280px;
+    }
+    div#box-right{
+        height: 300px;
+    }
+    div.wrapper-box-exp-cook .box-exp{
+        width: 100%;
+    }
+    div.wrapper-box-exp-cook{
+        display: flex;
+        flex-direction: column;
+    }
+    div#box-left.box-wrap{
+        height: 450px;
+    }
+}
+
+@media (max-width: 420px) {
+    div.wrapper-box-exp-cook{
+        display: flex;
+        flex-direction: column;
+    }
+    div.wrapper-box-exp-cook .box-exp{
+        width: 100%;
+    }
+    div#box-left h1{
+        font-size: 25px;
+    }
+    div#box-left p{
+        font-size: 15px;
+    }
+    div#box-right img{
+        height: 200px;
+        width: 200px;
+    }
+    div#box-right{
+        height: 250px;
+    }
+    div.btn-str-exp{
+        justify-content: center;
+    }
+    div#box-left{
+        margin-bottom: 100px;
+    }
+    div.btn-str-exp a{
+        font-size: 11px;
+    }
+    div#box-left.box-wrap{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    div.wrapper-box-exp-cook{
+        display: flex;
+        flex-direction: column;
+    }
+    div.wrapper-box-exp-cook .box-exp{
+        width: 100%;
+    }
+    div#box-left h1{
+        font-size: 25px;
+    }
+    div#box-left p{
+        font-size: 15px;
+    }
+    div#box-right img{
+        height: 200px;
+        width: 200px;
+    }
+    div#box-right{
+        height: 250px;
+    }
+    div.btn-str-exp{
+        justify-content: center;
+    }
+    div#box-left{
+        margin-bottom: 100px;
+    }
+    div.btn-str-exp a{
+        font-size: 6px;
+    }
+    div#box-left.box-wrap{
+        margin-bottom: 200px;
+    }
+    div#box-left h1{
+        font-size: 16px;
+    }
+    div#box-left.box-wrap{
+        margin-bottom: 0%;
+    }
+    div#box-left p{
+        font-size: 11px;
+    }
+}
