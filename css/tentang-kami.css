@@ -1,0 +1,171 @@
+.Judul h1{
+    text-align: center;
+    padding: 40px;
+    margin: 0%;
+}
+.card-text, .card-title{
+    text-align: center;
+}
+
+.card-img-top{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+.list-group-item{
+    font-size: 18px;
+    text-align: center;
+}
+
+.card{
+    border: 1px grey solid;
+}
+
+.card-body{
+    padding-top: 0%;
+}
+
+.footer-copyright{
+    position: static;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.icon svg{
+    margin: 0px 15px;
+}
+
+.banner{
+    background-color: #d3455aa2;
+    margin-top: 40px;
+    padding: 40px 0px;
+}
+
+.banner h1, .banner p{
+    text-align: center;
+    color: white;
+}
+
+.banner h1{
+    margin-bottom: 40px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.content img{
+    height: 350px;
+    width: 350px;
+}
+
+.banner p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: justify;
+    width:60%;
+}
+
+.thanks h1{
+    text-align: center;
+    padding: 40px 0px;
+    font-weight: bold;
+    margin: 0%;
+}
+
+.allrow{
+    margin-bottom: 40px;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row1 a, .row2 a{
+    color: #d3455a;
+    font-size: 25px;
+    font-weight: 500;    
+}
+
+.link:hover, .card-text svg:hover {
+    color: lightcoral;
+}
+
+.card-text svg{
+    color: #d3455a;
+}
+
+.page-footer{
+    position: static;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    height: 10px;
+    background-color: #d3455b;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    .content{
+      flex-direction: column;
+      align-items: center;
+    }
+    .allrow{
+        display: flex;
+    }
+    .row1, .row2{
+        flex-direction: column;
+        align-items: center;
+        margin: 0% auto;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .content{
+      flex-direction: column;
+      align-items: center;
+    }
+    .allrow{
+        display: flex;
+    }
+    .row1, .row2{
+        flex-direction: column;
+        align-items: center;
+        margin: 0% auto;
+        font-size: 16px;
+    }
+    .banner p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .content img{
+        height: 200px;
+        width: 200px;
+    }
+    .banner h1{
+        font-size: 20px;
+    }
+  }
