@@ -49,112 +49,146 @@
         </div>
     </nav>
 
+    <!-- Loading -->
+    <div class="container py-5 px-2" id="loading">
+      <div class="spinner-border text-danger" role="status"></div>
+      <span class="display-6">Loading...</span>
+    </div>
+    
     <!-- Content -->
-    <div class="container p-5">
+    <div class="container py-5 px-2 d-none" id="content">
       <!-- Search Bar -->
       <div class="row">
         <div class="col">
           <div class="input-group mb-3 mx-auto w-75">
-            <input type="text" class="form-control" placeholder="Cari resep favoritmu di sini!">
-            <button class="btn btn-outline-secondary" type="button" id="search">Cari</button>
+            <input type="text" class="form-control" id="search-input" placeholder="Cari resep favoritmu di sini!">
+            <button class="btn btn-outline-secondary" type="button" id="search-btn">
+              <i class="fas fa-search"></i>
+              Cari
+            </button>
           </div>
         </div>
       </div>
       <!-- Category -->
-      <div class="row">
-        <div class="col">
-          <h2 class="py-3 text-center">Kategori Makanan</h2>
+      <div class="container p-2">
+        <div class="row">
+          <div class="col">
+            <h2 class="py-3 text-center">Kategori Makanan</h2>
+          </div>
+        </div>
+        <div class="row align-items-start category">
+          <div class="col">
+            <a href="/resep-kategori.html?category=sarapan&title=Makan Pagi">
+              <img 
+                src="https://source.unsplash.com/rQsYZnCRU00/580x580" 
+                alt="makan-pagi" 
+                class="rounded-circle w-75 mx-auto d-block h-100"
+              />
+              <h5 class="pt-2 text-center">Makan Pagi</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=makan-siang&title=Makan Siang">
+              <img 
+                src="https://source.unsplash.com/m7rnjifC_yg/580x580"     
+                alt="makan-siang" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Makan Siang</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=makan-malam&title=Makan Malam">
+              <img 
+                src="https://source.unsplash.com/EdzsUFqHbaY/580x580"     
+                alt="makan-malam" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Makan Malam</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=masakan-hari-raya&title=Hari Raya">
+              <img 
+                src="https://source.unsplash.com/tZwcwRw6x1c/580x580"     
+                alt="hari-raya" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Hari Raya</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=masakan-tradisional&title=Tradisional">
+              <img 
+                src="https://source.unsplash.com/K63facPD8gg/580x580"  
+                alt="tradisional" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Tradisional</h5>
+            </a>
+          </div>
+        </div>
+        <div class="row align-items-start pt-4 category">
+          <div class="col">
+            <a href="/resep-kategori.html?category=resep-daging&title=Daging">
+              <img 
+                src="https://source.unsplash.com/6-5Ul3I6vSE/580x580"
+                alt="daging" 
+                class="rounded-circle w-75 mx-auto d-block h-100"
+              />
+              <h5 class="pt-2 text-center">Daging</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=resep-ayam&title=Ayam">
+              <img 
+                src="https://source.unsplash.com/RWAToPPP9RY/580x580"    
+                alt="ayam" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Ayam</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=resep-seafood&title=Seafood">
+              <img 
+                src="https://source.unsplash.com/3zvFjKSTq2o/580x580"    
+                alt="seafood" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Seafood</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=resep-sayuran&title=Sayuran">
+              <img 
+                src="https://source.unsplash.com/4jpNPu7IW8k/580x580"    
+                alt="sayuran" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Sayuran</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/resep-kategori.html?category=resep-dessert&title=Dessert">
+              <img 
+                src="https://source.unsplash.com/pxTe1qZjcvI/580x580" 
+                alt="dessert" 
+                class="rounded-circle w-75 mx-auto d-block"
+              />
+              <h5 class="pt-2 text-center">Dessert</h5>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="row align-items-start">
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" 
-            alt="makan-pagi" 
-            class="rounded-circle w-75 mx-auto d-block h-100"
-          />
-          <h5 class="pt-2 text-center">Makan Pagi</h5>
+        <!-- Recipes -->
+      <div class="container p-2">
+        <div class="row">
+          <div class="col">
+            <h2 class="py-3 text-center">Resep Terbaru</h2>
+          </div>
         </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1580694129446-25862b43c178?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"     
-            alt="makan-siang" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Makan Siang</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"     
-            alt="makan-malam" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Makan Malam</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1605926637512-c8b131444a4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"     
-            alt="hari-raya" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Hari Raya</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1562607635-4608ff48a859?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"     
-            alt="tradisional" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Tradisional</h5>
-        </div>
-      </div>
-      <div class="row align-items-start pt-4">
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1595356161904-6708c97be89c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"
-            alt="daging" 
-            class="rounded-circle w-75 mx-auto d-block h-100"
-          />
-          <h5 class="pt-2 text-center">Daging</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"    
-            alt="ayam" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Ayam</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1604909053259-c5952d9a0feb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"    
-            alt="seafood" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Seafood</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"    
-            alt="sayuran" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Sayuran</h5>
-        </div>
-        <div class="col">
-          <img 
-            src="https://images.unsplash.com/photo-1629612212286-52d66243b79e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" 
-            alt="dessert" 
-            class="rounded-circle w-75 mx-auto d-block"
-          />
-          <h5 class="pt-2 text-center">Dessert</h5>
-        </div>
-      </div>
-      <!-- Recipes -->
-      <div class="row">
-        <div class="col">
-          <h2 class="py-3 text-center">Resep Terbaru</h2>
-        </div>
+        <div class="latest-recipes row pb-5"></div>
       </div>
     </div>
 
@@ -171,5 +205,8 @@
     
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3fe8d7c4e1.js" crossorigin="anonymous"></script>
 </body>
 </html>
