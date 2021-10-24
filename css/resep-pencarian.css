@@ -1,0 +1,11 @@
+.nav-back {
+  color: #d3455b;
+  text-decoration: none;
+}
+
+/* Search button */
+.btn {
+  background-color: #d3455b;
+  color: white;
+  border-color: #d3455b;
+}
