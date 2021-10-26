@@ -1,0 +1,19 @@
+.profil-nav {
+  color: #d3455b;
+}
+
+/* Search button */
+.btn {
+  background-color: #d3455b;
+  color: white;
+  border-color: #d3455b;
+}
+
+#ubah-profil-btn {
+  color: #d3455b;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px;
+  border: #d3455b solid;
+  border-radius: 5%;
+}

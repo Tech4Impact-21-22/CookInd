@@ -41,7 +41,8 @@
           </ul>
           <ul class="navbar-nav navbar-rigt mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active active-page" aria-current="page" href="profil.html">Profil</a>
+                <i class="fas fa-user-circle profil-nav"></i>
+                <a class="nav-link active active-page d-inline" aria-current="page" href="profil.html">Profil</a>
               </li>
           </ul>
         </div>
@@ -50,7 +51,37 @@
 
 
     <!-- Content -->
-    
+    <div class="container py-5 px-2">
+      <div class="row">
+        <div class="col-5 text-end">
+          <i class="fas fa-user-circle fa-7x"></i>
+        </div>
+        <div class="col-7 text-start">
+          <div class="row">
+            <h2 id="name"></h2>
+          </div>
+          <div class="row">
+            <h6 id="email"></h6>
+          </div>
+          <div class="row-cols-2">
+              <a href="/ubah-profil.html" id="ubah-profil-btn">Ubah Profil</a>
+              <button type="submit" class="btn w-auto mb-1" id="submit">Keluar</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Wishlist -->
+     <div class="container p-2">
+      <div class="row">
+        <div class="col">
+          <h2 class="py-3 text-center">Wishlist</h2>
+        </div>
+      </div>
+      <div class="recipes-wishlist row pb-5"></div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="page-footer font-small">
@@ -60,7 +91,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script type="module" src="js/index.js"></script>
     <script src="js/profil.js"></script>
     
     <!-- Bootstrap -->
