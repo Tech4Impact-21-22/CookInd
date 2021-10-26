@@ -15,14 +15,10 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="beranda.html">
                 <img src="images/logo-CookInd.png" alt="" width="140" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-0" id="navbar-text">
               <li class="nav-item">
                 Masuk
               </li>
@@ -31,6 +27,47 @@
     </nav>
 
     <!-- Content -->
+    <div class="container py-5 px-2">
+        <nav>
+            <a class="nav-back" href="javascript:history.back()">< Kembali</a>
+        </nav>
+        <div class="row p-2">
+          <div class="col">
+            <h2 class="text-center">Masuk</h2>
+          </div>
+        </div>
+  
+        <div class="row pt-2 px-2 pb-5">
+            <div class="col mb-3 w-75">
+                <form id="form">
+                    <div class="mb-4">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Masukkan e-mail" required>
+                        <div class="text-danger d-none" id="email-invalid">
+                            Mohon masukkan e-mail.
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Masukkan password" required>
+                        <div class="text-end">
+                            <a href="/ubah-password.html"><small>Lupa password?</small></a>
+                        </div>
+                        <div class="text-danger d-none" id="pass-invalid">
+                            Mohon masukkan password yang benar.
+                        </div>
+                    </div>
+                    <div class="submit-btn text-center">
+                        <button type="submit" class="btn mb-1" id="submit">Submit</button> <br/>
+                        <small class="mb-5">
+                            <span>Belum punya akun? | </span>
+                            <a href="/daftar.html">Daftar</a>
+                        </small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     
 
     <!-- Footer -->
@@ -41,7 +78,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script type="module" src="js/index.js"></script>
     <script src="js/masuk.js"></script>
     
     <!-- Bootstrap -->
