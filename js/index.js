@@ -1,3 +1,16 @@
+// Get HTML elements
+const elSignup = document.querySelector('#signup');
+const elLogin = document.querySelector('#login');
+const elProfile = document.querySelector('#profile');
+
+// Check logged in or not
+const loggedIn = sessionStorage.getItem('loggedIn');
+if(loggedIn){
+    elSignup.classList.add('d-none');
+    elLogin.classList.add('d-none');
+    elProfile.classList.remove('d-none');
+}
+
 // Search Recipes
 export const getRecipesSearch = async function(search_keyword){
     try{
@@ -42,7 +55,6 @@ export const getDetailRecipe = async function(food){
     }
 };
 
-//Error
 // Articles by Category
 export const getArticlesByCategory = async function(category){
     try{
@@ -54,7 +66,7 @@ export const getArticlesByCategory = async function(category){
     }
 };
 
-//Error
+
 // Article Detail
 export const getDetailArticle = async function(category, title){
     try{
