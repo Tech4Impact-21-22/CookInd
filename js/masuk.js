@@ -21,7 +21,7 @@ elBtn.addEventListener('click', function(e){
         if(signedUp){
             if(signedUp.pass===password){
                 sessionStorage.setItem('loggedIn', email);
-                window.location.href = '/beranda.html';
+                window.location.href = '/index.html';
                 elForm.reset();
             }else{
                 elPassword.value = '';

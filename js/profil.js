@@ -16,7 +16,7 @@ elEmail.innerText = sessionStorage.getItem('loggedIn');
 elLogOutBtn.addEventListener('click', function(e){
     e.preventDefault();
     sessionStorage.removeItem('loggedIn');
-    window.location.href='/beranda.html'
+    window.location.href='/index.html'
 })
 
 // Wishlist

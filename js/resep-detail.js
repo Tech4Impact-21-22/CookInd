@@ -100,8 +100,7 @@ function addWishlist(event){
                 this.setAttribute('style', 'color:#d3455b;');
             } else {
                 localStorage.setItem(loggedIn, JSON.stringify(
-                    {'key': params.food,
-                    "name": profile.name, 
+                    {"name": profile.name, 
                     "pass":profile.pass, 
                     "wishlist":wishlist.filter(function(recipe){
                         return recipe.title !== title;
