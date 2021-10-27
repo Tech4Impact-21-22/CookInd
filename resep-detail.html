@@ -15,7 +15,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="beranda.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo-CookInd.png" alt="" width="140" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="beranda.html">Beranda</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active active-page" aria-current="page" href="resep.html">Resep</a>
@@ -53,10 +53,10 @@
         </div>
     </nav>
 
-    <div class="container py-5 px-2" id="loading">
+    <div class="container py-5 px-2 d-flex align-items-center justify-content-center h-100" id="loading">
       <div class="spinner-border text-danger" role="status"></div>
       <span class="display-6">Loading...</span>
-    </div>
+    </div>  
     
     <!-- Content -->
     <div class="container py-5 px-2 d-none" id="content">
@@ -64,7 +64,7 @@
         <a class="nav-back" href="javascript:history.back()">< Kembali</a>
       </nav>
       <!-- Header -->
-      <div class="container-fluid recipe-header">
+      <div class="container recipe-header">
         <div class="row p-2">
           <div class="col">
             <h1 class="text-center" id="recipe-title"></h1>
@@ -77,17 +77,20 @@
           </div>
         </div>
         <div class="row p-2">
-          <div class="col text-end">
-            <i class="fas fa-star  d-inline align-middle"></i>
-            <p class="d-inline align-middle" id="difficulty"></p>
-          </div>
-          <div class="col text-center">
-            <i class="fas fa-hourglass-half d-inline align-middle"></i>
-            <p class="d-inline align-middle" id="times"></p>
-          </div>
-          <div class="col text-start">
-            <i class="fas fa-concierge-bell d-inline align-middle"></i>
-            <p class="d-inline align-middle" id="serving"></p>
+            <div class="col text-center">
+              <i class="fas fa-star  d-inline align-middle"></i>
+              <p class="d-inline align-middle me-3" id="difficulty"></p>
+              <i class="fas fa-hourglass-half d-inline align-middle"></i>
+              <p class="d-inline align-middle me-3" id="times"></p>
+              <i class="fas fa-concierge-bell d-inline align-middle"></i>
+              <p class="d-inline align-middle" id="serving"></p>
+            </div>
+            <div class="col text-center">
+              <button class="btn btn-small p-0" id="add-wishlist">
+                <i class="fas fa-heart fa-2x d-inline align-middle"></i></i>
+              </button>
+              <p class="d-inline align-middle">Add to Wishlist</p>
+            </div>
           </div>
         </div>
         <div class="row p-2 text-center">
@@ -101,7 +104,7 @@
         </div>
       </div>
       <!-- Ingredients -->
-      <div class="container-fluid recipe-ingredients">
+      <div class="container recipe-ingredients d-none">
         <div class="row pt-3 pb-2 px-2">
           <div class="col">
             <h3>Bahan</h3>
@@ -119,14 +122,14 @@
         </div>
       </div>
       <!-- Steps -->
-      <div class="container-fluid recipe-steps pb-5">
+      <div class="container recipe-steps pb-5 d-none">
         <div class="row pt-3 pb-2 px-2">
           <div class="col">
             <h3>Langkah</h3>
           </div>
         </div>
         <div class="row p-2 fs-4">
-          <div class="col">
+          <div class="col mb-5">
             <ol id="steps">
             </ol>
           </div>

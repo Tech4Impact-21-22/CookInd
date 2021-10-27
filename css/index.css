@@ -33,3 +33,7 @@ footer {
   width: 100%;
   position: absolute;
 }
+
+a:hover {
+  color: black;
+}

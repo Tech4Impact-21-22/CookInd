@@ -16,6 +16,9 @@ const elRecipeIngredientsSCol = document.querySelector('#ingredients-col2')
 const elRecipeSteps = document.querySelector('#steps');
 const elLoading = document.querySelector('#loading');
 const elContent = document.querySelector('#content');
+const elReceipeIngredientsContainer = document.querySelector('.recipe-ingredients');
+const elReceipeStepsContainer = document.querySelector('.recipe-steps');
+const elWishlistBtn = document.querySelector('#add-wishlist');
 
 // Render elements
 const renderRecipeDetail = async function(){
@@ -45,9 +48,90 @@ const renderRecipeDetail = async function(){
         }
         elLoading.classList.add('d-none')
         elContent.classList.remove('d-none')
+        elReceipeIngredientsContainer.classList.remove('d-none')
+        elReceipeStepsContainer.classList.remove('d-none')
     } catch(error){
         console.log(error)
     }
 };
 
 renderRecipeDetail();
+
+// Add to wishlist 
+function addWishlist(event){
+    event.preventDefault();
+    // Check whether a user is loggedIn
+    const loggedIn = sessionStorage.getItem('loggedIn');
+
+    if(loggedIn){
+        const profile = JSON.parse(localStorage.getItem(loggedIn));
+        const thumb = params.thumb;
+        const title = elRecipeTitle.innerText;
+        const difficulty = elRecipeDifficulty.innerText;
+        const time = elRecipeTime.innerText;
+        const serving = elRecipeServing.innerText;
+        if(!profile.wishlist || profile.wishlist.length === 0){
+            const wishlist = [];
+            wishlist.push({
+                'key': params.food,
+                'title': title, 
+                'thumb': thumb,
+                'dificulty': difficulty,
+                'portion': serving,
+                'times' : time
+            });
+            localStorage.setItem(loggedIn, JSON.stringify({"name": profile.name, "pass":profile.pass, "wishlist":wishlist}))
+            this.setAttribute('style', 'color:#d3455b;');
+        }else{
+            const wishlist = profile.wishlist;
+            const checkWishlist = wishlist.filter(function(recipe){
+                return recipe.title === title;
+            }) 
+            if(checkWishlist.length === 0){
+                wishlist.push({
+                    'key': params.food,
+                    'title': title, 
+                    'thumb': thumb,
+                    'dificulty': difficulty,
+                    'portion': serving,
+                    'times' : time
+                });
+                localStorage.setItem(loggedIn, JSON.stringify({"name": profile.name, "pass":profile.pass, "wishlist":wishlist}));
+                this.setAttribute('style', 'color:#d3455b;');
+            } else {
+                localStorage.setItem(loggedIn, JSON.stringify(
+                    {"name": profile.name, 
+                    "pass":profile.pass, 
+                    "wishlist":wishlist.filter(function(recipe){
+                        return recipe.title !== title;
+                    })}
+                ))
+                this.removeAttribute('style');
+            }
+            }
+    } else {
+        window.location.href = '/masuk.html';
+    }
+}
+
+elWishlistBtn.addEventListener('click', addWishlist);
+
+// Check add to wishlist button color
+function checkButton(){
+   // Check whether a user is loggedIn
+   const loggedIn = sessionStorage.getItem('loggedIn');
+   if(loggedIn){
+        const profile = JSON.parse(localStorage.getItem(loggedIn));
+        const wishlist = profile.wishlist;
+        if(wishlist){
+            const checkWishlist = wishlist.filter(function(recipe){
+                return recipe.key === params.food;
+            })
+            if(checkWishlist.length !== 0){
+                elWishlistBtn.setAttribute('style', 'color:#d3455b;');
+            } 
+        }
+   }
+}
+
+checkButton();
