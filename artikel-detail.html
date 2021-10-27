@@ -53,8 +53,42 @@
         </div>
     </nav>
 
+    <div class="container py-5 px-2 d-flex align-items-center justify-content-center h-100" id="loading">
+      <div class="spinner-border text-danger" role="status"></div>
+      <span class="display-6">Loading...</span>
+    </div> 
+
     <!-- Content -->
-    
+    <div class="container py-5 px-2 d-none" id="content">
+      <nav>
+        <a class="nav-back" href="javascript:history.back()">< Artikel</a>
+      </nav>
+
+      <!-- title -->
+      <div class="col">
+        <h1 class="text-center" id="article-title"></h1>
+      </div>
+      <div class="row p-2 text-center">
+        <div class="col">
+          <i class="fas fa-user-circle fa-2x d-inline align-middle"></i>
+          <p class="d-inline align-middle" id="author-date"></p>
+        </div>
+      </div>
+      <div class="row p-2 text-center">
+        <div class="col">
+          <img src="" alt="" class="w-75" id="article-thumb" />
+        </div>
+      </div>
+
+      <!-- article content -->
+      <div class="container detail-content pb-5">
+        <div class="row p-2 fs-4">
+          <div class="col">
+            <p id="detail"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="page-footer font-small">

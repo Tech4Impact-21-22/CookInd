@@ -60,18 +60,19 @@ export const getArticlesByCategory = async function(category){
     try{
         const fetchArticles = await fetch(`http://3.1.13.186:3030/api/categorys/article/${category}`)
         const articles = await fetchArticles.json();
+        
         return articles;       
     } catch(error){
         console.log('getArticlesByCategory', error);
     }
 };
 
-
 // Article Detail
-export const getDetailArticle = async function(category, title){
+export const getDetailArticle = async function(category, key){
     try{
-        const fetchArticle = await fetch(`http://3.1.13.186:3030/api/article/${category}/${title}`)
+        const fetchArticle = await fetch(`http://3.1.13.186:3030/api/article/${category}/${key}`)
         const article = await fetchArticle.json();
+        
         return article;       
     } catch(error){
         console.log('getDetailArticle', error);
@@ -161,3 +162,38 @@ export function createRecipeCard(recipe, search=false){
     })
     return elCol;
 };
+
+//create article card
+export function createArticleCard(article, category){
+
+    const elBody = document.createElement('div');
+    const elCol = document.createElement('div');
+    const elCard = document.createElement('div');
+    const elCardImg = document.createElement('img');
+    const elCardBody = document.createElement('small');
+    const elCardTitle = document.createElement('h6');
+
+    elBody.classList.add('row', 'pt-3' , 'container')
+    elCol.classList.add('col');
+    elCard.classList.add('card' ,'text-center', 'h-100', 'w-100' , 'article-card');
+    elCardImg.classList.add('card-img-rounded');
+    elCardBody.classList.add('card-body', 'text-capitalize');
+    elCardTitle.classList.add('card-title');
+
+    elCardImg.src = article.thumb;
+    elCardTitle.innerText = article.title;
+    elCardBody.innerText = article.tags;
+
+    elCardBody.appendChild(elCardTitle);
+    elCard.appendChild(elCardImg);
+    elCard.appendChild(elBody);
+    elCol.appendChild(elCard);
+    elBody.appendChild(elCardTitle);
+    elBody.appendChild(elCardBody);
+
+    elCol.addEventListener('click', function(e){
+        e.preventDefault();
+        window.location.href=`/artikel-detail.html?category=${category}&key=${article.key}`
+    })
+    return elCol;
+}
