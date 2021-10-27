@@ -85,20 +85,16 @@ export function createRecipeCard(recipe, search=false){
     const elCardImg = document.createElement('img');
     const elCardBody = document.createElement('div');
     const elCardTitle = document.createElement('h5');
-    const elCardTextFirstRow = document.createElement('div');
-    const elCardTextFFirstCol = document.createElement('div');
-    const elCardTextFFirstFContent = document.createElement('i');
-    const elCardTextFFirstSContent = document.createElement('small');
-    const elCardTextFSecondCol = document.createElement('div');
-    const elCardTextFSecondFContent = document.createElement('i');
-    const elCardTextFSecondSContent = document.createElement('small');
-    const elCardTextSecondRow = document.createElement('div');
-    const elCardTextSFirstCol = document.createElement('div');
-    const elCardTextSFirstFContent = document.createElement('i');
-    const elCardTextSFirstSContent = document.createElement('small');
-    const elCardTextSSecondCol = document.createElement('div');
-    const elCardTextSSecondFContent = document.createElement('i');
-    const elCardTextSSecondSContent = document.createElement('small');
+    const elCardTextRow = document.createElement('div');
+    const elCardTextFirstCol = document.createElement('div');
+    const elCardTextFirstFContent = document.createElement('i');
+    const elCardTextFirstSContent = document.createElement('small');
+    const elCardTextSecondCol = document.createElement('div');
+    const elCardTextSecondFContent = document.createElement('i');
+    const elCardTextSecondSContent = document.createElement('small');
+    const elCardTextThirdCol = document.createElement('div');
+    const elCardTextThirdFContent = document.createElement('i');
+    const elCardTextThirdSContent = document.createElement('small');
     const elBtn = document.createElement('a');
 
     elCol.classList.add('col-xs-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'my-3');
@@ -106,49 +102,40 @@ export function createRecipeCard(recipe, search=false){
     elCardImg.classList.add('card-img-top');
     elCardBody.classList.add('card-body');
     elCardTitle.classList.add('card-title');
-    elCardTextFirstRow.classList.add('row', 'card-text');
-    elCardTextFFirstCol.classList.add('col');
-    elCardTextFFirstFContent.classList.add('fas', 'fa-star');
-    elCardTextFSecondCol.classList.add('col')
-    elCardTextFSecondFContent.classList.add('far', 'fa-heart');
-    elCardTextSecondRow.classList.add('row', 'card-text', 'pb-3');
-    elCardTextSFirstCol.classList.add('col');
-    elCardTextSFirstFContent.classList.add('fas', 'fa-hourglass-half');
-    elCardTextSSecondCol.classList.add('col');
-    elCardTextSSecondFContent.classList.add('fas', 'fa-concierge-bell');
+    elCardTextRow.classList.add('row', 'card-text');
+    elCardTextFirstCol.classList.add('col');
+    elCardTextFirstFContent.classList.add('fas', 'fa-star');
+    elCardTextSecondCol.classList.add('col');
+    elCardTextSecondFContent.classList.add('fas', 'fa-hourglass-half');
+    elCardTextThirdCol.classList.add('col');
+    elCardTextThirdFContent.classList.add('fas', 'fa-concierge-bell');
     elBtn.classList.add('btn');
     
     elCardImg.src = recipe.thumb;
     elCardTitle.innerText = recipe.title;
-    elCardTextFSecondSContent.innerText = " Wishlist";
     if(search===false){
-        elCardTextFFirstSContent.innerText = ` ${recipe.dificulty}`;
-        elCardTextSSecondSContent.innerText = ` ${recipe.portion}`;
+        elCardTextFirstSContent.innerText = ` ${recipe.dificulty}`;
+        elCardTextThirdSContent.innerText = ` ${recipe.portion}`;
     } else{
-        elCardTextFFirstSContent.innerText = ` ${recipe.difficulty}`;
-        elCardTextSSecondSContent.innerText = ` ${recipe.serving}`;
+        elCardTextFirstSContent.innerText = ` ${recipe.difficulty}`;
+        elCardTextThirdSContent.innerText = ` ${recipe.serving}`;
     }
-    elCardTextSFirstSContent.innerText = ` ${recipe.times}`;
+    elCardTextSecondSContent.innerText = ` ${recipe.times}`;
     elBtn.href = `/resep-detail.html?food=${recipe.key}&thumb=${recipe.thumb}`;
     elBtn.innerText = 'Dapatkan Resep';
 
-    elCardTextFFirstCol.appendChild(elCardTextFFirstFContent);
-    elCardTextFFirstCol.appendChild(elCardTextFFirstSContent);
-    elCardTextFSecondCol.appendChild(elCardTextFSecondFContent);
-    elCardTextFSecondCol.appendChild(elCardTextFSecondSContent);
-    elCardTextFirstRow.appendChild(elCardTextFFirstCol);
-    elCardTextFirstRow.appendChild(elCardTextFSecondCol);
-    
-    elCardTextSFirstCol.appendChild(elCardTextSFirstFContent);
-    elCardTextSFirstCol.appendChild(elCardTextSFirstSContent);
-    elCardTextSSecondCol.appendChild(elCardTextSSecondFContent);
-    elCardTextSSecondCol.appendChild(elCardTextSSecondSContent);
-    elCardTextSecondRow.appendChild(elCardTextSFirstCol);
-    elCardTextSecondRow.appendChild(elCardTextSSecondCol);
+    elCardTextFirstCol.appendChild(elCardTextFirstFContent);
+    elCardTextFirstCol.appendChild(elCardTextFirstSContent);    
+    elCardTextSecondCol.appendChild(elCardTextSecondFContent);
+    elCardTextSecondCol.appendChild(elCardTextSecondSContent);
+    elCardTextThirdCol.appendChild(elCardTextThirdFContent);
+    elCardTextThirdCol.appendChild(elCardTextThirdSContent);
+    elCardTextRow.appendChild(elCardTextFirstCol);
+    elCardTextRow.appendChild(elCardTextSecondCol);
+    elCardTextRow.appendChild(elCardTextThirdCol);
     
     elCardBody.appendChild(elCardTitle);
-    elCardBody.appendChild(elCardTextFirstRow);
-    elCardBody.appendChild(elCardTextSecondRow);
+    elCardBody.appendChild(elCardTextRow);
     elCardBody.appendChild(elBtn);
 
     elCard.appendChild(elCardImg);
