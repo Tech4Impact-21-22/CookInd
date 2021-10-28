@@ -1,9 +1,5 @@
 import { getArticlesByCategory, createArticleCard} from "./index.js";
 
-// Get params
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
-
 // Get elements from HTML
 const elInspirasi = document.querySelector('#cardSatu');
 const elGayaHidup = document.querySelector('#cardDua');
@@ -16,6 +12,8 @@ var kategori = document.querySelectorAll('.button-categories');
 kategori.forEach(button => {
 button.onclick = function() {
     let buttonCategory=this.dataset.category;
+    elLoading.classList.remove('d-none');
+    elContent.classList.add('d-none');
     renderArtikel(buttonCategory);
         }
     }
@@ -25,7 +23,7 @@ button.onclick = function() {
 const renderArtikel = async function(category= 'inspirasi-dapur'){
     try{
         let articles = await getArticlesByCategory(category);   
-        for(let i=0; i<16; i++){
+        for(let i=0; i<articles.results.length; i++){
              let articleCard = createArticleCard(articles.results[i], category);
            if (category === 'tips-masak') {
                elTips.appendChild(articleCard);             

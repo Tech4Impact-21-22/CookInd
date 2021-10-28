@@ -12,3 +12,8 @@
 #loading {
   min-height: 70vh;
 }
+
+#add-wishlist:hover {
+  background-color: white !important;
+  color: lightcoral;
+}

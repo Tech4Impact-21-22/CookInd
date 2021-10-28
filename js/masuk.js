@@ -19,7 +19,7 @@ elBtn.addEventListener('click', function(e){
     let signedUp = JSON.parse(localStorage.getItem(email));
     if(email!==''){
         if(signedUp){
-            if(signedUp.pass===password){
+            if(signedUp.pass !=='' && signedUp.pass===password){
                 sessionStorage.setItem('loggedIn', email);
                 window.location.href = '/index.html';
                 elForm.reset();

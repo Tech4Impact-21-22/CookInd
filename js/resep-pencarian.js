@@ -16,9 +16,16 @@ const renderRecipes = async function(){
         let recipes = await getRecipesSearch(params.search_keyword);
         if(recipes.results.length !== 0){
             elSearchTitle.innerText = `Resep "${params.search_keyword}"`;
-            for(let i=0; i<recipes.results.length; i++){
-                let recipeCard = createRecipeCard(recipes.results[i], true);
-                elSearchRecipes.appendChild(recipeCard);
+            if(recipes.results.length <= 20){
+                for(let i=0; i<recipes.results.length; i++){
+                    let recipeCard = createRecipeCard(recipes.results[i], true);
+                    elSearchRecipes.appendChild(recipeCard);
+                }
+            }else{
+                for(let i=0; i<20; i++){
+                    let recipeCard = createRecipeCard(recipes.results[i], true);
+                    elSearchRecipes.appendChild(recipeCard);
+                }
             }
         } else{
             elSearchTitle.innerText = `Maaf, resep "${params.search_keyword}" tidak ditemukan.`

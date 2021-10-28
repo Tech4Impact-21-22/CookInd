@@ -30,33 +30,36 @@
         <nav>
             <a class="nav-back" href="javascript:history.back()">< Kembali</a>
         </nav>
-        <div class="row p-2">
-          <div class="col">
-            <h2 class="text-center">Ubah Profil</h2>
-          </div>
-        </div>
-  
-        <div class="row pt-2 px-2 pb-5">
-            <div class="col mb-3 w-75">
-                <form id="form">
-                    <div class="mb-4">
-                        <label for="name" class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap" required>
-                        <div class="text-danger d-none" id="name-invalid">
-                            Mohon masukkan nama lengkap.
+
+        <div class="card py-5 p-3 my-3 w-50 mx-auto">
+            <div class="row p-2">
+            <div class="col">
+                <h2 class="text-center">Ubah Profil</h2>
+            </div>
+            </div>
+    
+            <div class="row pt-2 px-2">
+                <div class="col mb-3 w-75">
+                    <form id="form">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap" required>
+                            <div class="text-danger d-none" id="name-invalid">
+                                Mohon masukkan nama lengkap.
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email" placeholder="Masukkan e-mail" required>
-                        <div class="text-danger d-none" id="email-invalid">
-                            Mohon masukkan e-mail yang valid.
+                        <div class="mb-4">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan e-mail" required>
+                            <div class="text-danger d-none" id="email-invalid">
+                                Mohon masukkan e-mail yang valid.
+                            </div>
                         </div>
-                    </div>
-                    <div class="submit-btn text-center">
-                        <button type="submit" class="btn mb-1" id="submit">Submit</button> <br/>
-                    </div>
-                </form>
+                        <div class="submit-btn text-center">
+                            <button type="submit" class="btn mb-1" id="submit">Submit</button> <br/>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
