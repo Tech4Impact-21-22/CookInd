@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/artikel-detail.css">
+    <title>CookInd - Artikel Detail</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo-CookInd.png" alt="" width="140" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="resep.html">Resep</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active active-page" aria-current="page" href="artikel.html">Artikel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="tentang-kami.html">Tentang Kami</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-rigt mb-2 mb-lg-0">
+              <li class="nav-item d-none" id="profile">
+                <i class="fas fa-user-circle"></i>
+                <a class="nav-link active d-inline" aria-current="page" href="profil.html">Profil</a>
+              </li>
+              <li class="nav-item" id="login">
+                <a class="nav-link active" aria-current="page" href="masuk.html">Masuk</a>
+              </li>
+              <li class="nav-item" id="signup">
+                  <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="daftar.html">Daftar</a>
+                  </div>
+              </li>
+          </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 px-2 d-flex flex-column align-items-center justify-content-center h-100" id="loading">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_qX4zwY.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+      <p class="display-6">Loading...</p>
+    </div> 
+
+    <!-- Content -->
+    <div class="container py-5 px-3 d-none" id="content">
+      <nav>
+        <a class="nav-back" href="javascript:history.back()">< Artikel</a>
+      </nav>
+
+      <!-- title -->
+      <div class="col px-3">
+        <h1 class="text-center" id="article-title"></h1>
+      </div>
+      <div class="row p-3 text-center">
+        <div class="col">
+          <i class="fas fa-user-circle fa-2x d-inline align-middle"></i>
+          <p class="d-inline align-middle" id="author-date"></p>
+        </div>
+      </div>
+      <div class="row p-3 text-center">
+        <div class="col">
+          <img src="" alt="" class="w-75" id="article-thumb" />
+        </div>
+      </div>
+
+      <!-- article content -->
+      <div class="container detail-content pb-5">
+        <div class="row p-3 fs-4">
+          <div class="col pt-4">
+            <p id="detail"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Group 21 Skilvul#Tech4Impact. All rights reserved.
+        </div>    
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/artikel-detail.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3fe8d7c4e1.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

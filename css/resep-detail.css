@@ -1,0 +1,19 @@
+.nav-back {
+  color: #d3455b;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+#loading {
+  min-height: 70vh;
+}
+
+#add-wishlist:hover {
+  background-color: white !important;
+  color: lightcoral;
+}
