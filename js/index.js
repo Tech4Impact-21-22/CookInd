@@ -14,7 +14,7 @@ if(loggedIn){
 // Search Recipes
 export const getRecipesSearch = async function(search_keyword){
     try{
-        const fetchRecipes = await fetch(`http://3.1.13.186:3030/api/search/?q=${search_keyword}`)
+        const fetchRecipes = await fetch(`https://masakapahariini-api.eddypermana.com/api/search/?q=${search_keyword}`)
         const recipes = await fetchRecipes.json();
         return recipes;       
     } catch(error){
@@ -25,7 +25,7 @@ export const getRecipesSearch = async function(search_keyword){
 // Recipes by Category
 export const getRecipesByCategory = async function(category){
     try{
-        const fetchRecipes = await fetch(`http://3.1.13.186:3030/api/categorys/recipes/${category}`)
+        const fetchRecipes = await fetch(`https://masakapahariini-api.eddypermana.com/api/categorys/recipes/${category}`)
         const recipes = await fetchRecipes.json();
         return recipes;       
     } catch(error){
@@ -36,7 +36,7 @@ export const getRecipesByCategory = async function(category){
 // Latest Recipes
 export const getLatestRecipes = async function(){
     try{
-        const fetchRecipes = await fetch('http://3.1.13.186:3030/api/recipes')
+        const fetchRecipes = await fetch('https://masakapahariini-api.eddypermana.com/api/recipes')
         const recipes = await fetchRecipes.json();
         return recipes;       
     } catch(error){
@@ -47,7 +47,7 @@ export const getLatestRecipes = async function(){
 // Detail Recipe
 export const getDetailRecipe = async function(food){
     try{
-        const fetchRecipe = await fetch(`http://3.1.13.186:3030/api/recipe/${food}`)
+        const fetchRecipe = await fetch(`https://masakapahariini-api.eddypermana.com/api/recipe/${food}`)
         const recipe = await fetchRecipe.json();
         return recipe;       
     } catch(error){
@@ -58,7 +58,7 @@ export const getDetailRecipe = async function(food){
 // Articles by Category
 export const getArticlesByCategory = async function(category){
     try{
-        const fetchArticles = await fetch(`http://3.1.13.186:3030/api/categorys/article/${category}`)
+        const fetchArticles = await fetch(`https://masakapahariini-api.eddypermana.com/api/categorys/article/${category}`)
         const articles = await fetchArticles.json();
         
         return articles;       
@@ -70,7 +70,7 @@ export const getArticlesByCategory = async function(category){
 // Article Detail
 export const getDetailArticle = async function(category, key){
     try{
-        const fetchArticle = await fetch(`http://3.1.13.186:3030/api/article/${category}/${key}`)
+        const fetchArticle = await fetch(`https://masakapahariini-api.eddypermana.com/article/${category}/${key}`)
         const article = await fetchArticle.json();
         
         return article;       
