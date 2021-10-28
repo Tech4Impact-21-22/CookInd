@@ -70,7 +70,7 @@ export const getArticlesByCategory = async function(category){
 // Article Detail
 export const getDetailArticle = async function(category, key){
     try{
-        const fetchArticle = await fetch(`https://masakapahariini-api.eddypermana.com/article/${category}/${key}`)
+        const fetchArticle = await fetch(`https://masakapahariini-api.eddypermana.com/api/article/${category}/${key}`)
         const article = await fetchArticle.json();
         
         return article;       
