@@ -54,10 +54,11 @@
     </nav>
 
     <!-- Loading -->
-    <div class="container py-5 px-2 d-flex align-items-center justify-content-center h-100" id="loading">
-      <div class="spinner-border text-danger" role="status"></div>
-      <span class="display-6">Loading...</span>
-    </div>  
+    <div class="container py-5 px-2 d-flex flex-column align-items-center justify-content-center h-100" id="loading">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_qX4zwY.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+      <p class="display-6">Loading...</p>
+    </div> 
 
     <!-- Content -->
     <div class="container py-5 px-2 d-none" id="content">
